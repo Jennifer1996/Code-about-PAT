@@ -3,28 +3,28 @@ const int maxn = 210;
 int a[maxn];
 int main(){
     int n,x;
-    while(scanf("%d",&n) != EOF){ //��һ��ǳ��ؼ������Ա�֤���������������в���
+    while(scanf("%d",&n) != EOF){ //这一句非常关键，可以保证不断输入样例进行测试
         for(int i=0;i<n;i++)
         {
-            scanf("%d",&a[i]); //����n����
+            scanf("%d",&a[i]); //输入n个数
         }
-        scanf("%d",&x);//��������ѯ����
-        int k; //�±�
-        for(k=0;k<n;k++) //��������
+        scanf("%d",&x);//输入欲查询的数
+        int k; //下标
+        for(k=0;k<n;k++) //遍历数组
         {
-            if(a[k] == x){ //����ҵ�x
-                printf("%d\n",k);//�����Ӧ���±�
-                break;//�˳�����
+            if(a[k] == x){ //如果找到x
+                printf("%d\n",k);//输出对应的下标
+                break;//退出查找
             }
         }
-        if(k == n){//���û���ҵ�
-            printf("-1\n"); //���-1
+        if(k == n){//如果没有找到
+            printf("-1\n"); //输出-1
         }
     }
     return 0;
 }
 
-/*�Լ�����
+/*自己代码
 int j;
 int main()
 {
@@ -52,5 +52,6 @@ int main()
     return 0;
 }*/
 
-//Ψһ�Ĳ��������� while(scanf("%d",&n) != EOF)
- //��һ��ǳ��ؼ������Ա�֤���������������в���
+//唯一的差别就是少了while(scanf("%d",&n)!=EOF) 
+ //这一句非常关键，可以保证不断输入样例进行测试
+大神说:while(scanf("%d",&n) != EOF)的意思就是连续输入,有的题要求有n组输入来测试，所以要在所有程序外面加上这一句
