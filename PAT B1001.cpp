@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <cstdio>
 int main()
 {
     unsigned int n;
@@ -20,4 +20,5 @@ int main()
     printf("%d",number);
     return 0;
 }
+
 
