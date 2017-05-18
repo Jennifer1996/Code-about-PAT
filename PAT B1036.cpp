@@ -1,20 +1,35 @@
 #include <iostream>
 using namespace std;
 int main() {
+
     int N;
     char c;
     cin >> N >> c;
-    int t = N / 2 + N % 2;
-    for (int i = 0; i < N; i++)
-        cout << c;
-    cout << endl;
-    for (int i = 0; i < t - 2; i++) {
-        cout << c;
-        for (int k = 0; k < N - 2; k++)
-            cout << " ";
-        cout << c << endl;
+
+    int h = N;
+    if( h % 2 == 1){ //根据四舍五入确定行
+        h += 1;
     }
-    for (int i = 0; i < N; i++)
-        cout << c;
-    return 0;
-}
+
+    for (int i = 0; i < h/2; i++){
+
+        if(i==0||i==h/2-1){//首先确定第一行和最后一行，全部打满
+                for(int j=0;j<N;j++){
+                     cout << c;
+                }
+              cout<<endl;
+        }else{
+        for(int j=0;j<N;j++){
+            if(j==0||j==N-1){
+                cout<<c;
+            }else{
+                cout<<" ";
+            }
+            }
+             cout<<endl;
+        }
+        }
+          return 0;
+    }
+
+
